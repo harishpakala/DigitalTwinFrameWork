@@ -1,11 +1,11 @@
-# PythonAASxServer
+# DigitalTwinFramework
 
 ## Dependencies
 
 This repository hosts the source code for Python AASx Server, 
 
 :one: The  code is written in Python 3.9 <br />
-:two: All the Python dependencies are specified in the [requirements.txt](https://github.com/harishpakala/PythonAASxServer/blob/master/requirements.txt) <br />
+:two: All the Python dependencies are specified in the [requirements.txt](https://github.com/harishpakala/DigitalTwinFramework/blob/master/requirements.txt) <br />
 :three: The LIA OVGU development uses eclipse editor, accordingly eclipse related project files are provided in the repository.
 
 ### Installing Dependencies
@@ -33,10 +33,10 @@ LIA_NAMESPACE=ovgu.de
 </code></pre>
 ## Running 
 1) The base python program is organized inside the src/main subdirectory.  <br/>
-<strong>python3.9 pyaasxServer.py</strong> <br/>
+<strong>python3.9 dtserver.py</strong> <br/>
 
 ## AAS Registry Rest API Services
-The table 2 provides list of rest services the Python AASx Serve rprovides, it also lists down the allowed operations for each of the service. The services are as per the guidelines of [AAS Detail Part 2](https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part_2_V1.html). 
+The table 2 provides list of rest services the DigitalTwinFramework provides, it also lists down the allowed operations for each of the service. The services are as per the guidelines of [AAS Detail Part 2](https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part_2_V1.html). 
 
 {aasIdentifier} = idShort or global unique identifier of AAS or global unique identifier of the aaset that the AAS is representing <br />
 {submodelIdentifier} = idShort or global unique identifier of Submodel <br />
@@ -65,20 +65,20 @@ The table 2 provides list of rest services the Python AASx Serve rprovides, it a
 |<http://localhost:60012/shells/{path:aasIdentifier}/aas/skills/{path:skillName}/skill>| ❌|❌|❌|✔️|
 
 ## Back Ground 
-### Finite State Machines and the SKills.
+### Actors.
 <p align="justify">
-In PythonAASxServer the concept skills represent the behavior of the type 3 AAS. These skills are modelled as Finite State Machines (FSM). The interactions between the skills happens with exchange the [I4.0 Messages](https://github.com/harishpakala/I40_Language_Semantics) <br/>
+In DigitalTwinFramework the concept skills represent the behavior of the type 3 AAS. These skills are modelled as Actors. The interactions between the Actors happens with exchange the [I4.0 Messages](https://github.com/harishpakala/I40_Language_Semantics) <br/>
    
 <strong>Interaction Protocols </strong> represent structured sequence of messages exchanged between multiple partners / actors to achieve a specified goal (Example : Three-Way Handhake Protocol). An instance / execution of an interaction protocol is associated with a specific conversationID, all the messages wihtin the concersation have the same conversationID within I4.0 frame part. Each skilll in a Interaction Protocol is specific Role Name. There could be multiple skills with same Role Name.<br/>
 
-The Python source-code created by the state machine creator contains a set of classes. Each state represents a specific state and the entire state machine is represensted by anotehr class, that coordinates it's execution. <br/>
+The Python source-code created by the Actor machine creator contains a set of classes. Each Step represents a specific Step and the entire Actor is represensted by another class, that coordinates it's execution. <br/>
 
-Each skill / FSM is associated with a specific queue within in the [PythonAASxServer](https://github.com/harishpakala/PythonAASxServer) framework.<br/>
+Each Actor is associated with a specific queue within in the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework.<br/>
 
 Transitions between the states are expected due to one of the three event-types a) Inbound Message, b) Internal Trigger c) External Trigger.<br/>
 </p>
 
-## Sample State
+## Sample Step
 
 ```
 class Hello(AState):
@@ -99,16 +99,16 @@ class Hello(AState):
 ```
 
 <p align="center">
-A Hello state formatted as per Pyhton AASxServer and the StateMachine creator.
+A Hello state formatted as per DigitalTwinFramework and the Actor Machine creator.
 </p>
 
-* The Hello state inherits the class Abstract class <strong>AState</strong> [source-code](https://github.com/harishpakala/PythonAASxServer/blob/c308300e3e78dbac5cacbbf6c09fc526a4d52eff/src/main/utils/sip.py#L43). <br/>
+* The Hello state inherits the class Abstract class <strong>AState</strong> [source-code](https://github.com/harishpakala/DigitalTwinFramework/blob/c308300e3e78dbac5cacbbf6c09fc526a4d52eff/src/main/utils/sip.py#L43). <br/>
 * The static variable message_in represents the list of messages that the FSM is expected to receive in the specific state. <br/>
 * This class provides a set of guard conditions reequired for transitions to the next state. All the logic to the be executed within the Hello state needs to be written in the <strong>actions()</strong> method. <br/>
 * The <strong>transitions()</strong> method should not be edited. <br/>
 * For every next state a boolean guard variable will be provided in the constructor of the class, extracted from the JSON file. All the guard variables are defaulted to True. <br/>
 * The developer needs to disable gaurd variable (False) in the <strong>actions()</strong> method, for the state that is not the next one. <br/>
-* The [PythonAASxServer](https://github.com/harishpakala/PythonAASxServer) framework takes care and hide the complete mechanism behind the exchange of I4.0 messages between the skills. <br/>
+* The [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework takes care and hide the complete mechanism behind the exchange of I4.0 messages between the skills. <br/>
 
 ### Send and Receive Methods 
 
@@ -218,7 +218,7 @@ The Control waits untill a specific number of messaages are arrived in the buffe
 
 ### Data access between states of a FSM
 
-Every FSM skill is provided by tape by the [PythonAASxServer](https://github.com/harishpakala/PythonAASxServer) framework. Each entry in the tape is key value pair.
+Every FSM skill is provided by tape by the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework. Each entry in the tape is key value pair.
 
 ```
 push(key,value)
@@ -269,11 +269,11 @@ class AccessProvider(Actor):
 The python project maintains a logger, all the important aspects regarding its functionality  are captured with logger. The entire log information is stored into .LOG files under the src &gt; main &gt; logs folder.
 
 ## Issues
-If you want to request new features or report bug [submit a new issue](https://github.com/harishpakala/PythonAASxServer/issues/new)
+If you want to request new features or report bug [submit a new issue](https://github.com/harishpakala/DigitalTwinFramework/issues/new)
 
 ## License
 
-Python AAS Registry is Licensed under Apache 2.0, the complete license text including the copy rights is included under [License.txt](https://github.com/harishpakala/PythonAASxServer/blob/main/LICENSE.txt)
+Python AAS Registry is Licensed under Apache 2.0, the complete license text including the copy rights is included under [License.txt](https://github.com/harishpakala/DigitalTwinFramework/blob/main/LICENSE.txt)
 
 * APScheduler,python-snap7,jsonschema,aiocoap,hbmqtt MIT License <br />
 * Flask,werkzeug, Flask-RESTful, python-dotenv BSD-3-Clause <br />
