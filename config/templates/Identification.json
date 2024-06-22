@@ -1,0 +1,728 @@
+{
+    "assetAdministrationShells": [
+        {
+            "submodels": [
+                {
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/2150_8113_1032_8482"
+                        }
+                    ],
+                    "type": "ExternalReference"
+                }
+            ],
+            "idShort": "Test_Identification",
+            "category": "CONSTANT",
+            "id": "https://example.com/ids/aas/8530_8113_1032_3245",
+            "modelType": "AssetAdministrationShell",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "defaultThumbnail": {
+                    "path": "file://temp/asset.png"
+                },
+                "globalAssetId": "www.company.com/asset/9746_9342_9937_6241"
+            }
+        }
+    ],
+    "submodels": [
+        {
+            "semanticId": {
+                "keys": [
+                    {
+                        "type": "Submodel",
+                        "value": "https://www.hsu-hh.de/aut/aas/identification"
+                    }
+                ],
+                "type": "ExternalReference"
+            },
+            "idShort": "Identification",
+            "category": "CONSTANT",
+            "kind": "Instance",
+            "submodelElements": [
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAO677#002"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerName",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAY812#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerId01",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAP796#004"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerIdProvider",
+                    "category": "CONSTANT",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAO676#003"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerTypId",
+                    "category": "CONSTANT",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAW338#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerTypName",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAU734#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturerTypDescription",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAO735#003"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierName",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAY813#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierId",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/7183_0272_7091_7264"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierIdProvider",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAO736#004"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierTypId",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAM551#002"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierTypName",
+                    "category": "CONSTANT",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAU730#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SupplierTypDescription",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAU731#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "TypClass",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "eclass",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/4135_0272_7091_2192"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ClassificationSystem",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/3175_0272_7091_0469"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SecondaryKeyTyp",
+                    "category": "CONSTANT",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "file://aasx/files/",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/4401_1272_7091_3437"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "TypThumbnail",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "contentType": "application/pdf",
+                    "modelType": "File"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/7373_4082_7091_2893"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "AssetId",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/9544_4082_7091_8596"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "InstanceId",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAQ196#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ChargeId",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/3195_4082_7091_9039"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SecondaryKeyInstance",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAR972#002"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ManufacturingDate",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/4370_5082_7091_1975"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "DeviceRevision",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/2190_5082_7091_3557"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "SoftwareRevision",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/3401_5082_7091_6886"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "HardwareRevision",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "value": "file://aasx/files/",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/3121_5082_7091_1060"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "QrCode",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "contentType": "application/pdf",
+                    "modelType": "File"
+                },
+                {
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "https://www.hsu-hh.de/aut/aas/contactinfo"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "ContactInfo01",
+                    "category": "PARAMETER",
+                    "value": [
+                        {
+                            "value": "",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "0173-1#02-AAO735#003"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "Name",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "value": "Manufacturer",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "https://www.hsu-hh.de/aut/aas/role"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "Role",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "https://www.hsu-hh.de/aut/aas/physicaladdress"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "PhysicalAddress",
+                            "category": "PARAMETER",
+                            "value": [
+                                {
+                                    "value": "DE",
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "ConceptDescription",
+                                                "value": "0173-1#02-AAO730#001"
+                                            }
+                                        ],
+                                        "type": "ExternalReference"
+                                    },
+                                    "idShort": "CountryCode",
+                                    "category": "PARAMETER",
+                                    "kind": "Instance",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "value": "",
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "ConceptDescription",
+                                                "value": "https://www.hsu-hh.de/aut/aas/street"
+                                            }
+                                        ],
+                                        "type": "ExternalReference"
+                                    },
+                                    "idShort": "Street",
+                                    "category": "PARAMETER",
+                                    "kind": "Instance",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "value": "",
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "ConceptDescription",
+                                                "value": "https://www.hsu-hh.de/aut/aas/postalcode"
+                                            }
+                                        ],
+                                        "type": "ExternalReference"
+                                    },
+                                    "idShort": "PostalCode",
+                                    "category": "PARAMETER",
+                                    "kind": "Instance",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "value": "",
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "ConceptDescription",
+                                                "value": "https://www.hsu-hh.de/aut/aas/city"
+                                            }
+                                        ],
+                                        "type": "ExternalReference"
+                                    },
+                                    "idShort": "City",
+                                    "category": "PARAMETER",
+                                    "kind": "Instance",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "value": "",
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "ConceptDescription",
+                                                "value": "https://www.hsu-hh.de/aut/aas/statecounty"
+                                            }
+                                        ],
+                                        "type": "ExternalReference"
+                                    },
+                                    "idShort": "StateCounty",
+                                    "category": "PARAMETER",
+                                    "kind": "Instance",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                }
+                            ],
+                            "kind": "Instance",
+                            "modelType": "SubmodelElementCollection"
+                        },
+                        {
+                            "value": "",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "https://www.hsu-hh.de/aut/aas/email"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "Email",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "value": "",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "0173-1#02-AAO694#001"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "URL",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "value": "",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "https://www.hsu-hh.de/aut/aas/phone"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "Phone",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "value": "",
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "ConceptDescription",
+                                        "value": "https://www.hsu-hh.de/aut/aas/fax"
+                                    }
+                                ],
+                                "type": "ExternalReference"
+                            },
+                            "idShort": "Fax",
+                            "category": "PARAMETER",
+                            "kind": "Instance",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        }
+                    ],
+                    "kind": "Instance",
+                    "modelType": "SubmodelElementCollection"
+                },
+                {
+                    "value": "file://aasx/files/",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "www.company.com/ids/cd/5232_8082_7091_1138"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "CompanyLogo",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "contentType": "application/pdf",
+                    "modelType": "File"
+                },
+                {
+                    "value": "",
+                    "semanticId": {
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "0173-1#02-AAO694#001"
+                            }
+                        ],
+                        "type": "ExternalReference"
+                    },
+                    "idShort": "URL",
+                    "category": "PARAMETER",
+                    "kind": "Instance",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                }
+            ],
+            "modelType": "Submodel",
+            "id": "https://example.com/ids/sm/2150_8113_1032_8482"
+        }
+    ]
+}
