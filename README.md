@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-This repository hosts the source code for Python AASx Server, 
+This repository hosts the source code for DigitalTwinFramework, 
 
 :one: The  code is written in Python 3.9 <br />
 :two: All the Python dependencies are specified in the [requirements.txt](https://github.com/harishpakala/DigitalTwinFramework/blob/master/requirements.txt) <br />
@@ -75,13 +75,13 @@ The Python source-code created by the Actor machine creator contains a set of cl
 
 Each Actor is associated with a specific queue within in the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework.<br/>
 
-Transitions between the states are expected due to one of the three event-types a) Inbound Message, b) Internal Trigger c) External Trigger.<br/>
+Transitions between the Steps are expected due to one of the three event-types a) Inbound Message, b) Internal Trigger c) External Trigger.<br/>
 </p>
 
 ## Sample Step
 
 ```
-class Hello(AState):
+class Hello(AStep):
     message_in =  ["Ping",]       
     
     def initialize(self):
@@ -99,15 +99,15 @@ class Hello(AState):
 ```
 
 <p align="center">
-A Hello state formatted as per DigitalTwinFramework and the Actor Machine creator.
+A Hello Step formatted as per DigitalTwinFramework and the Actor Machine creator.
 </p>
 
-* The Hello state inherits the class Abstract class <strong>AState</strong> [source-code](https://github.com/harishpakala/DigitalTwinFramework/blob/c308300e3e78dbac5cacbbf6c09fc526a4d52eff/src/main/utils/sip.py#L43). <br/>
-* The static variable message_in represents the list of messages that the FSM is expected to receive in the specific state. <br/>
-* This class provides a set of guard conditions reequired for transitions to the next state. All the logic to the be executed within the Hello state needs to be written in the <strong>actions()</strong> method. <br/>
+* The Hello Step inherits the class Abstract class <strong>Step</strong> [source-code](https://github.com/harishpakala/DigitalTwinFramework/blob/c308300e3e78dbac5cacbbf6c09fc526a4d52eff/src/main/utils/sip.py#L43). <br/>
+* The static variable message_in represents the list of messages that the FSM is expected to receive in the specific Step. <br/>
+* This class provides a set of guard conditions reequired for transitions to the next Step. All the logic to the be executed within the Hello Step needs to be written in the <strong>actions()</strong> method. <br/>
 * The <strong>transitions()</strong> method should not be edited. <br/>
-* For every next state a boolean guard variable will be provided in the constructor of the class, extracted from the JSON file. All the guard variables are defaulted to True. <br/>
-* The developer needs to disable gaurd variable (False) in the <strong>actions()</strong> method, for the state that is not the next one. <br/>
+* For every next Step a boolean guard variable will be provided in the constructor of the class, extracted from the JSON file. All the guard variables are defaulted to True. <br/>
+* The developer needs to disable gaurd variable (False) in the <strong>actions()</strong> method, for the Step that is not the next one. <br/>
 * The [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework takes care and hide the complete mechanism behind the exchange of I4.0 messages between the skills. <br/>
 
 ### Send and Receive Methods 
@@ -216,7 +216,7 @@ The Control waits untill a specific number of messaages are arrived in the buffe
 </p>
 <br/>
 
-### Data access between states of a FSM
+### Data access between Steps of a FSM
 
 Every FSM skill is provided by tape by the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework. Each entry in the tape is key value pair.
 
@@ -245,7 +245,7 @@ Clears the tapes, removes all the key,value pairs. Usually it is done afer an it
 <br/>
 
 
-## Controller class of a FSM AccessProvider
+## Controller class of a AccessProvider Actor
 
 class AccessProvider(Actor):
     '''
