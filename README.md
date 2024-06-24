@@ -103,7 +103,7 @@ A Hello Step formatted as per DigitalTwinFramework and the Actor Machine creator
 </p>
 
 * The Hello Step inherits the class Abstract class <strong>Step</strong> [source-code](https://github.com/harishpakala/DigitalTwinFramework/blob/c308300e3e78dbac5cacbbf6c09fc526a4d52eff/src/main/utils/sip.py#L43). <br/>
-* The static variable message_in represents the list of messages that the FSM is expected to receive in the specific Step. <br/>
+* The static variable message_in represents the list of messages that the Actor is expected to receive in the specific Step. <br/>
 * This class provides a set of guard conditions reequired for transitions to the next Step. All the logic to the be executed within the Hello Step needs to be written in the <strong>actions()</strong> method. <br/>
 * The <strong>transitions()</strong> method should not be edited. <br/>
 * For every next Step a boolean guard variable will be provided in the constructor of the class, extracted from the JSON file. All the guard variables are defaulted to True. <br/>
@@ -216,9 +216,9 @@ The Control waits untill a specific number of messaages are arrived in the buffe
 </p>
 <br/>
 
-### Data access between Steps of a FSM
+### Data access between Steps of a Actor
 
-Every FSM skill is provided by tape by the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework. Each entry in the tape is key value pair.
+Every Actor is provided by tape by the [DigitalTwinFramework](https://github.com/harishpakala/DigitalTwinFramework) framework. Each entry in the tape is key value pair.
 
 ```
 push(key,value)
@@ -240,7 +240,7 @@ Returns the value associated with the specific key.
 flush()
 ```
 <p>
-Clears the tapes, removes all the key,value pairs. Usually it is done afer an iteration of the FSM.
+Clears the tapes, removes all the key,value pairs. Usually it is done afer an iteration of the Actor.
 </p>
 <br/>
 
